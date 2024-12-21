@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="607.0" prefWidth="885.0" styleClass="#ffffff" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapp.LoginController">
+   <children>
+      <Pane layoutX="14.0" layoutY="11.0" prefHeight="585.0" prefWidth="399.0" style="-fx-background-color: #237d29;">
+         <children>
+            <Text fill="WHITE" layoutX="14.0" layoutY="301.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Employee Management System">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Text>
+            <FontAwesomeIcon glyphName="USERS" layoutX="79.0" layoutY="232.0" size="15em" />
+         </children>
+      </Pane>
+      <Text fill="RED" layoutX="443.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome back Admin">
+         <font>
+            <Font size="34.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txtusername" layoutX="443.0" layoutY="231.0" onAction="#AdminLogin" prefHeight="45.0" prefWidth="334.0" promptText="username" style="-fx-background-color: red;" styleClass="#ffffff">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </TextField>
+      <PasswordField fx:id="txtpassword" layoutX="443.0" layoutY="326.0" onAction="#AdminLogin" prefHeight="48.0" prefWidth="334.0" promptText="Password" style="-fx-background-color: red;">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </PasswordField>
+      <Button fx:id="btnlogin" layoutX="443.0" layoutY="422.0" mnemonicParsing="false" onAction="#AdminLogin" prefHeight="48.0" prefWidth="143.0" style="-fx-background-color: #ff0000;" text="Login" textFill="WHITE">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Button>
+      <Button fx:id="btncancel" layoutX="817.0" layoutY="22.0" mnemonicParsing="false" onAction="#btncancel" prefHeight="45.0" prefWidth="54.0" text="X" textFill="RED">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
