@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Dec 14, 2024 at 12:03 PM
+-- Generation Time: Dec 22, 2024 at 12:58 AM
 -- Server version: 8.2.0
 -- PHP Version: 8.2.13
 
@@ -51,16 +51,51 @@ INSERT INTO `admin` (`id`, `username`, `password`) VALUES
 DROP TABLE IF EXISTS `employeedata`;
 CREATE TABLE IF NOT EXISTS `employeedata` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `emp_id` varchar(100) NOT NULL,
-  `emp_firstname` varchar(50) NOT NULL,
-  `emp_lastname` varchar(50) NOT NULL,
+  `empid` int NOT NULL,
+  `firstname` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `lastname` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `gender` varchar(10) NOT NULL,
   `phone` varchar(100) NOT NULL,
+  `address` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `position` varchar(100) NOT NULL,
   `image` varchar(255) NOT NULL,
-  `date` int DEFAULT NULL,
+  `date` date DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `employeedata`
+--
+
+INSERT INTO `employeedata` (`id`, `empid`, `firstname`, `lastname`, `gender`, `phone`, `address`, `position`, `image`, `date`) VALUES
+(21, 1, 'chea', 'sophon', 'Male', '085520589', 'phnompenh', 'Web Developer', 'C:\\\\Users\\\\MSI\\\\Documents\\\\NetBeansProjects\\\\JavaDB\\\\src\\\\Image\\\\download (1).png', '2024-12-21'),
+(22, 2, 'reachny', 'um', 'FeMale', '09876543', 'phnompenh', 'Mobile App', 'C:\\\\Users\\\\MSI\\\\Documents\\\\NetBeansProjects\\\\JavaDB\\\\src\\\\Image\\\\download.png', '2024-12-21');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `employee_info`
+--
+
+DROP TABLE IF EXISTS `employee_info`;
+CREATE TABLE IF NOT EXISTS `employee_info` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `empid` int NOT NULL,
+  `firstname` varchar(100) NOT NULL,
+  `lastname` varchar(100) NOT NULL,
+  `position` varchar(100) NOT NULL,
+  `salary` double NOT NULL,
+  `date` date NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `employee_info`
+--
+
+INSERT INTO `employee_info` (`id`, `empid`, `firstname`, `lastname`, `position`, `salary`, `date`) VALUES
+(13, 2, 'reachny', 'um', 'Mobile App', 0, '2024-12-21'),
+(12, 1, 'chea', 'sophon', 'Web Developer', 100, '2024-12-21');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
