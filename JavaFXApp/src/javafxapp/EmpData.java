@@ -26,7 +26,7 @@ public class EmpData {
         this(empid, firstname, lastname, gender, phone, address, position, image, date);
     }
 
-    public EmpData(int empid, String firstname, String lastname, String gender, String phone, String address, String position, String image, Date date) {
+    public EmpData(Integer empid, String firstname, String lastname, String gender, String phone, String address, String position, String image, Date date) {
         this.empid = empid;
         this.firstname = firstname;
         this.lastname = lastname;
@@ -41,7 +41,7 @@ public class EmpData {
 
     
     
-    public  EmpData(int empid, String firstname, String lastname, String position,  Double salary){
+    public  EmpData(Integer empid, String firstname, String lastname, String position,  Double salary){
          this.salary = salary;
          this.empid = empid;
          this.firstname = firstname;

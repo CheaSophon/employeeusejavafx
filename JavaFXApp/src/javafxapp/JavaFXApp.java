@@ -7,25 +7,15 @@ package javafxapp;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
-//import javafx.event.ActionEvent;
-//import javafx.event.EventHandler;
 import javafx.scene.Scene;
-//import javafx.scene.input.MouseEvent;
-//import javafx.scene.control.Button;
-//import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-//import javafx.stage.StageStyle;
-//import javafx.stage.StageStyle;
 
 /**
  *
  * @author MSI
  */
 public class JavaFXApp extends Application {
-
-    private double x = 0;
-      private double y = 0;
 
     @Override
     public void start(Stage stage) {

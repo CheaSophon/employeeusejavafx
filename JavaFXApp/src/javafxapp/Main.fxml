@@ -163,7 +163,7 @@
                                                 <TableColumn fx:id="emp_coldatsmeber" prefWidth="140.0" text="Data Menber" />
                                             </columns>
                                           </TableView>
-                                          <TextField fx:id="emp_search" alignment="CENTER_RIGHT" layoutX="14.0" layoutY="14.0" onKeyTyped="#addEmployeeSearch" prefHeight="30.0" prefWidth="277.0" promptText="Seach" styleClass="search" />
+                                          <TextField fx:id="emp_search" alignment="CENTER_RIGHT" layoutX="14.0" layoutY="14.0" prefHeight="30.0" prefWidth="277.0" promptText="Seach" styleClass="search" />
                                           <FontAwesomeIcon glyphName="SEARCH" layoutX="21.0" layoutY="35.0" size="1.5em" />
                                        </children>
                                     </AnchorPane>

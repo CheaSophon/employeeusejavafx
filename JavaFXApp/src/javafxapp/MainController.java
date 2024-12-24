@@ -14,11 +14,9 @@ import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 import java.util.ResourceBundle;
-import java.util.function.Predicate;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.collections.FXCollections;
-//import java.util.stream.Stream;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
 import javafx.collections.transformation.SortedList;
@@ -29,7 +27,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.chart.BarChart;
-import javafx.scene.chart.PieChart;
 import javafx.scene.chart.XYChart;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
@@ -243,7 +240,7 @@ public class MainController implements Initializable {
                 alert.showAndWait();
             }
             else{
-               String check = "SELECT empid FROM employeedata WHERE empid = '" + emp_id.getText() + "'";
+               String check = "SELECT empid FROM employeedata WHERE empid = '" + emp_id.getText()+ "'";
                
                st = con.createStatement();
                rs = st.executeQuery(check);
@@ -410,14 +407,14 @@ public class MainController implements Initializable {
                 alert = new Alert(AlertType.CONFIRMATION);
                 alert.setTitle("Cofirmation Message");
                 alert.setHeaderText(null);
-                alert.setContentText("Are you sure you want to DELETE Employee ID: " + emp_id.getText() + "?");
+                alert.setContentText("Are you sure you want to DELETE Employee ID: " + emp_id.getText()+ "?");
                 Optional<ButtonType> option = alert.showAndWait();
                 if (option.get().equals(ButtonType.OK)) {
                     st = con.createStatement();
                     st.executeUpdate(sql);
                     
                     String deleteInfo = "DELETE FROM employee_info WHERE empid = '"
-                            + emp_id.getText() + "'";
+                            + emp_id.getText()+ "'";
                     
                     prs = con.prepareStatement(deleteInfo);
                     prs.executeUpdate();
@@ -805,7 +802,7 @@ public class MainController implements Initializable {
           
            addpositionList();
            addgenderList();
-           addEmployeeSearch();
+//           addEmployeeSearch();
        }
        else if(event.getSource()==salarybtn){
            home_form.setVisible(false);
